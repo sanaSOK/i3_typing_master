@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reset Password</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-size: 14px;
+      color: green;
+      text-align: center;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Reset Password</h2>
+    <form id="resetForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="oldPassword" placeholder="Old Password" required />
+      <input type="password" id="newPassword" placeholder="New Password" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm New Password" required />
+      <button type="submit">Change Password</button>
+    </form>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    // Fake user for simulation
+    const fakeUser = {
+      email: "user@example.com",
+      password: "123456" // old password
+    };
+
+    document.getElementById("resetForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const oldPassword = document.getElementById("oldPassword").value;
+      const newPassword = document.getElementById("newPassword").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const messageDiv = document.getElementById("message");
+
+      // Clear previous message
+      messageDiv.textContent = "";
+      messageDiv.classList.remove("error");
+
+      if (email !== fakeUser.email) {
+        messageDiv.textContent = "❌ Email not found.";
+        messageDiv.classList.add("error");
+      } else if (oldPassword !== fakeUser.password) {
+        messageDiv.textContent = "❌ Old password is incorrect.";
+        messageDiv.classList.add("error");
+      } else if (newPassword.length < 6) {
+        messageDiv.textContent = "❌ New password must be at least 6 characters.";
+        messageDiv.classList.add("error");
+      } else if (newPassword !== confirmPassword) {
+        messageDiv.textContent = "❌ New passwords do not match.";
+        messageDiv.classList.add("error");
+      } else {
+        // Simulate password update
+        fakeUser.password = newPassword;
+        messageDiv.textContent = "✅ Password updated successfully (simulated).";
+        messageDiv.classList.remove("error");
+      }
+    });
+  </script>
+
+</body>
+</html>
