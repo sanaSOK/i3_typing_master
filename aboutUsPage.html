@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Dark gray text */
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Consistent gradient */
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Main Content Section */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2em;
+            color: #2575fc;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #6a11cb;
+            display: inline-block;
+            padding-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        /* Mission/Vision Section Specific Styling */
+        .mission-vision p {
+            font-size: 1.15em;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Team Section */
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+            background-color: #fefefe;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid #2575fc;
+            box-shadow: 0 0 0 5px rgba(37, 117, 252, 0.1);
+        }
+
+        .team-member h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .team-member p.role {
+            font-size: 0.95em;
+            color: #6a11cb;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .team-member p.bio {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Call to Action/Contact Section */
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta h3 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .cta .button {
+            display: inline-block;
+            background-color: #2575fc;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta .button:hover {
+            background-color: #1a5edb;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.8em;
+            }
+            .section {
+                padding: 30px;
+            }
+            .section h3 {
+                font-size: 1.8em;
+            }
+            .team-members {
+                grid-template-columns: 1fr; /* Stack team members on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .section {
+                padding: 20px;
+            }
+            .section h3 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <p>Discover our journey, mission, and the dedicated people behind our success.</p>
+    </header>
+
+    <main class="container">
+        <section class="section introduction">
+            <h3>Our Story</h3>
+            <p>Founded in [Year], [Your Company Name] began with a simple yet powerful vision: [briefly state founding vision/problem solved]. From humble beginnings, we've grown into a leading [Your Industry/Niche] provider, driven by innovation and a commitment to our users.</p>
+            <p>Over the years, we've continuously evolved, embracing new technologies and methodologies to deliver exceptional [products/services]. Our journey has been marked by [mention a key milestone, e.g., significant user growth, award, major product launch], solidifying our position in the market.</p>
+        </section>
+
+        <section class="section mission-vision">
+            <h3>Mission & Vision</h3>
+            <p>"Our mission is to [concise mission statement - what you do, for whom, and why it matters]."</p>
+            <p>"We envision a future where [concise vision statement - what you aspire to achieve in the long term, your impact]."</p>
+            <p>These principles guide every decision we make and every product we build, ensuring we remain focused on creating value and fostering positive change.</p>
+        </section>
+
+        <section class="section values">
+            <h3>Our Core Values</h3>
+            <ul>
+                <li><strong>Customer Centricity:</strong> We put our users at the heart of everything we do, striving to understand and exceed their expectations.</li>
+                <li><strong>Innovation:</strong> We continuously seek new and better ways to solve problems and create cutting-edge solutions.</li>
+                <li><strong>Integrity:</strong> We operate with honesty, transparency, and a strong ethical compass.</li>
+                <li><strong>Collaboration:</strong> We believe in the power of teamwork and foster a supportive and inclusive environment.</li>
+                <li><strong>Excellence:</strong> We are committed to delivering high-quality products and services, always aiming for the best.</li>
+            </ul>
+        </section>
+
+        <section class="section team">
+            <h3>Meet Our Team</h3>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/6a11cb/FFFFFF?text=CEO" alt="[CEO Name]">
+                    <h4>[CEO Name]</h4>
+                    <p class="role">Chief Executive Officer</p>
+                    <p class="bio">Passionate visionary with over 20 years of experience in [industry]. Guides the company with strategic leadership and a focus on growth.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/2575fc/FFFFFF?text=CTO" alt="[CTO Name]">
+                    <h4>[CTO Name]</h4>
+                    <p class="role">Chief Technology Officer</p>
+                    <p class="bio">Drives technological innovation and oversees the development of our robust and scalable platforms.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/6a11cb/FFFFFF?text=CMO" alt="[CMO Name]">
+                    <h4>[CMO Name]</h4>
+                    <p class="role">Chief Marketing Officer</p>
+                    <p class="bio">Expert in brand strategy and market engagement, connecting our solutions with our audience effectively.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150/2575fc/FFFFFF?text=Lead+Dev" alt="[Lead Dev Name]">
+                    <h4>[Lead Dev Name]</h4>
+                    <p class="role">Lead Developer</p>
+                    <p class="bio">Key architect behind our core products, ensuring high performance and user-friendly experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta">
+            <h3>Have Questions? We'd Love to Hear From You!</h3>
+            <a href="#" class="button">Contact Us</a> </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Your Company Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
